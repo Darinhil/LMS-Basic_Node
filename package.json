@@ -2,8 +2,11 @@
   "name": "lms-basic_node",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "dist/server.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,13 +16,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/Darinhil/LMS-Basic_Node/issues"
   },
   "homepage": "https://github.com/Darinhil/LMS-Basic_Node#readme",
   "dependencies": {
-    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mysql2": "^3.22.3",
     "nodemon": "^3.1.14"
