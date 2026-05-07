@@ -15,11 +15,11 @@ app.get("/", (req, res) => {
   res.json({
     message: "Library Management System API is running",
     endpoints: [
-      { method: "GET", path: "/books" },
-      { method: "POST", path: "/books" },
-      { method: "PUT", path: "/books/:id" },
-      { method: "DELETE", path: "/books/:id" },
-      { method: "POST", path: "/borrow" },
+      { message: "Get all books", method: "GET", path: "/books" },
+      { message: "Create a new book", method: "POST", path: "/books" },
+      { message: "Update a book by ID", method: "PUT", path: "/books/:id" },
+      { message: "Delete a book by ID", method: "DELETE", path: "/books/:id" },
+      { message: "Borrow a book", method: "POST", path: "/borrow" },
     ],
   });
 });
