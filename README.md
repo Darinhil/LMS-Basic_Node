@@ -72,14 +72,6 @@ CREATE TABLE IF NOT EXISTS books (
   quantity INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS borrow_books (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT NOT NULL,
-  book_id INT NOT NULL,
-  status VARCHAR(50) NOT NULL DEFAULT 'borrowed',
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (book_id) REFERENCES books(id)
-);
 ```
 
 ## MVC Structure
@@ -90,13 +82,10 @@ src
     db.ts
   controllers
     bookController.ts
-    borrowController.ts
   models
     bookModel.ts
-    borrowModel.ts
   routes
     bookRoutes.ts
-    borrowRoutes.ts
   app.ts
   server.ts
 ```
@@ -108,7 +97,6 @@ GET    /books
 POST   /books
 PUT    /books/:id
 DELETE /books/:id
-POST   /borrow
 ```
 
 ## Example Requests
@@ -120,15 +108,6 @@ Create a book:
   "title": "Clean Code",
   "author": "Robert C. Martin",
   "quantity": 5
-}
-```
-
-Borrow a book:
-
-```json
-{
-  "user_id": 1,
-  "book_id": 1
 }
 ```
 
