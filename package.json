@@ -1,0 +1,38 @@
+{
+  "name": "lms-basic_node",
+  "version": "1.0.0",
+  "description": "Small library management system with Node.js, TypeScript, Express, and MySQL",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node --loader ts-node/esm --experimental-specifier-resolution=node src/server.ts",
+    "dev:watch": "node --watch --loader ts-node/esm --experimental-specifier-resolution=node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "check": "tsc --noEmit",
+    "test": "echo \"No tests added yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darinhil/LMS-Basic_Node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Darinhil/LMS-Basic_Node/issues"
+  },
+  "homepage": "https://github.com/Darinhil/LMS-Basic_Node#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  }
+}
